@@ -24,5 +24,5 @@ class Expence(models.Model):
     Description = models.TextField()
     Amount = models.PositiveIntegerField(null=True)
     Created_by = models.ForeignKey(CustomUser, on_delete=models.SET_NULL, null=True, blank=True,default=None)
-    created_at = models.DateTimeField(auto_now_add=True,null=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+    updated_at = models.DateTimeField(auto_now = True)

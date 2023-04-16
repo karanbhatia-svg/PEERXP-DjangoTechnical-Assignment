@@ -400,7 +400,6 @@ Welcome, {{user.username}}
 					</div>
 						</div>
 				</form>
-
 			</div>
 		</div>
 	</div>
@@ -408,26 +407,23 @@ Welcome, {{user.username}}
 	<!-- Delete Modal HTML -->
 		{% for item in expence %}
 		<div id="deleteEmployeeModal-{{forloop.counter}}" class="modal fade">
-			<div class="modal-dialog">
-				<div class="modal-content">
-
-						<div class="modal-header">
-							<h4 class="modal-title">Delete Employee</h4>
-							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						</div>
-						<div class="modal-body">
-
-							<p>Are you sure you want to delete {{item.id}} Record</p>
-							<p class="text-warning"><small>This action cannot be undone.</small></p>
-							</div>
-
-
-						</div>
-						<div class="modal-footer">
-							<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-							<a type="submit" href="/delete/{{item.id}}" class="btn btn-danger" >Delete</a>
-
-				</div>
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form>
+					<div class="modal-header">
+						<h4 class="modal-title">Delete Expense</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">
+						<p>Are you sure you want to delete these Records?</p>
+						<p class="text-warning"><small>This action cannot be undone.</small></p>
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<a href="/delete/{{item.id}}" type="submit" class="btn btn-danger" value="Delete">Delete</a>
+		</div>
+				</form>
+			</div>
 			</div>
 		</div>
 	</div>
@@ -445,6 +441,5 @@ Welcome, {{user.username}}
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/1f7863e279.js" crossorigin="anonymous"></script>
-</body>
 </body>
 </html>
