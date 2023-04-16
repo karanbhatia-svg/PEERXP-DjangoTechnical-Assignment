@@ -10,6 +10,6 @@ path('', views.showall, name='showall'),
 path('userall', views.userall, name='userall'),
 path('save', views.save, name='save'),
 path('update/<int:id>', views.update, name='update'),
-path('delete/<int:id>/', views.delete, name='delete'),
+path('delete/<int:id>', views.delete, name='delete'),
 
 ]

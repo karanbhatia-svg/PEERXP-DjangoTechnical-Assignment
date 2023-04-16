@@ -82,8 +82,8 @@ def save(request):
     return redirect('/')
 
 def delete(request, id):
-  expence = Expence.objects.filter(id=id).delete()
-
+  expence = Expence.objects.filter(id=id)
+  expence.delete()
   return redirect('/')
 
 def update(request, id):
